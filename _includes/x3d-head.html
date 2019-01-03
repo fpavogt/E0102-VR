@@ -5,13 +5,14 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
- <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script> 
+ <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script>
+ <script type='text/javascript' src='./x3d/clipplane_FPAV.js'> </script>
  <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
 <style>
 x3d{
  border:2px solid darkorange;        
- background:#000 url(./online_material/zqe_adg_cb_600400.png);
-}   
+ background:#000
+}
 </style>
 
 
