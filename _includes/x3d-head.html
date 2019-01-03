@@ -5,9 +5,9 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'> </script>
+  <script type='text/javascript' src='./x3d/x3dom.js'> </script>
   <script type='text/javascript' src='./x3d/clipplane_FPAV.js'> </script>
-  <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
+  <link rel='stylesheet' type='text/css' href='./x3d/x3dom.css'></link> 
  
   <!-- Call MathJax for better display of the units. A bit overkill maybe ...        -->
   <script type="text/x-mathjax-config">
