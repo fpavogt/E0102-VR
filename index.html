@@ -588,59 +588,58 @@ Typical loading time (dependant on connectivity speed): 5-30s.
 <!-- ################################################################################# -->
 <!-- ################################################################################# -->
  
-  <div>
-  <p style="width:100%"> 
-  <!-- Start of the X3DOM part -->   
-  <x3d id = "x3d" width='700px' height='500px', margin-left='300px'> 
-    <scene id="scene" doPickPass="false"> 
-    <!--<background backUrl="./background.png"></background>-->
-    <!-- Define the view points of interest -->
-    <OrthoViewpoint id="-z" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,1,0,3.14' position='0,0,-10' zFar='100' zNear='-10' ></OrthoViewpoint> 
-    <OrthoViewpoint id="+z" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,0,1,0' position='0,0,10' zFar='100' zNear='-10' ></OrthoViewpoint> 
-    <OrthoViewpoint id="-x" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,-1,0,1.57' position='-10,0,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
-    <OrthoViewpoint id="+x" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,1,0,1.57' position='10,0,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
-    <OrthoViewpoint id="-y" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='1,1,-1,2.0944' position='0,-10,0' zFar='100' zNear='-10' ></OrthoViewpoint>          
-    <OrthoViewpoint id="+y" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='1,1,1,4.1888' position='0,10,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
+<div>
+<p style="width:100%"> 
+<!-- Start of the X3DOM part -->   
+<x3d id = "x3d" width='700px' height='500px', margin-left='300px'> 
+   <scene id="scene" doPickPass="false"> 
+   <!--<background backUrl="./background.png"></background>-->
+   <!-- Define the view points of interest -->
+   <OrthoViewpoint id="-z" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,1,0,3.14' position='0,0,-10' zFar='100' zNear='-10' ></OrthoViewpoint> 
+   <OrthoViewpoint id="+z" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,0,1,0' position='0,0,10' zFar='100' zNear='-10' ></OrthoViewpoint> 
+   <OrthoViewpoint id="-x" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,-1,0,1.57' position='-10,0,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
+   <OrthoViewpoint id="+x" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,1,0,1.57' position='10,0,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
+   <OrthoViewpoint id="-y" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='1,1,-1,2.0944' position='0,-10,0' zFar='100' zNear='-10' ></OrthoViewpoint>          
+   <OrthoViewpoint id="+y" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='1,1,1,4.1888' position='0,10,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
        
-    <Transform id="clipScope">
-    <inline url="./x3d/1E0102_muse_mod.x3d" nameSpaceName="model" mapDEFToID="true" onclick=''/>
-    </Transform>
-    </scene> 
-  </x3d> 
-  <!-- End of the X3DOM part -->
-  </p>
-  </div>
+   <Transform id="clipScope">
+   <inline url="./x3d/1E0102_muse_mod.x3d" nameSpaceName="model" mapDEFToID="true" onclick=''/>
+   </Transform>
+   </scene> 
+</x3d> 
+<!-- End of the X3DOM part -->
+</p>
+</div>
 
-  <!-- Start of the interaction buttons part -->
-  <div> 
-  <p style="width:700px">
-    <b>Screenshot:</b> &emsp; <Button type="button" onclick="takeScreenshot();" style="background-color: GhostWhite">New</Button> 
-    &#8594; <a id="ssLink"></a>
-    <br><br>
-    <b>Outer flux density level:</b> &emsp; <a id="flux">2.5</a> \( \times10^{-18} \text{ erg s}^{-1} \text{ cm}^{-2}\ \AA^{-1}\) &emsp;
-    <button type="button" id="btnpClick" onClick="onpClick()" style="background-color: Tomato">+layer</button>
-    <button type="button" id="btnmClick" onClick="onmClick()" style="background-color: GhostWhite">-layer</button>  
-    <br><br>
-    <b>Reference spheres: </b> &emsp;
-    <button type="button" id="btnSphere_3" onClick="Sphere3()" style="background-color:lightgreen">Toggle R=3pc sphere</button>
-    <br><br>
-    <b>Viewpoints: </b> &emsp;
-    <button onclick="document.getElementById('x3d').runtime.resetView();" style="background-color: LightSteelBlue"><b>Reset View</b></button> 
-    <button onclick="setView(+1);" style="background-color: LightSteelBlue"><b>Next View</b></button> 
-    <br><br>
-    <button type="button" id="btn-z" onclick="setView('-z');" style="background-color: Moccasin">-z (from Earth)</button>
-    <button type="button" id="btn+z" onclick="setView('+z');" style="background-color: LightSteelBlue">+z (towards Earth)</button>
-    <button type="button" id="btn-x" onclick="setView('-x');" style="background-color: LightSteelBlue">-x (from West)</button>
-    <button type="button" id="btn+x" onclick="setView('+x');" style="background-color: LightSteelBlue">+x (from East)</button>
-    <button type="button" id="btn-y" onclick="setView('-y');" style="background-color: LightSteelBlue">-y (from South)</button>
-    <button type="button" id="btn+y" onclick="setView('+y');" style="background-color: LightSteelBlue">+y (from North)</button>
-  </p>
+<!-- Start of the interaction buttons part -->
+<div> 
+ <p style="width:700px">
+   <b>Screenshot:</b> &emsp; <Button type="button" onclick="takeScreenshot();" style="background-color: GhostWhite">New</Button> 
+   &#8594; <a id="ssLink"></a>
+   <br><br>
+   <b>Outer flux density level:</b> &emsp; <a id="flux">2.5</a> \( \times10^{-18} \text{ erg s}^{-1} \text{ cm}^{-2}\ \AA^{-1}\) &emsp;
+   <button type="button" id="btnpClick" onClick="onpClick()" style="background-color: Tomato">+layer</button>
+   <button type="button" id="btnmClick" onClick="onmClick()" style="background-color: GhostWhite">-layer</button>  
+   <br><br>
+   <b>Reference spheres: </b> &emsp;
+   <button type="button" id="btnSphere_3" onClick="Sphere3()" style="background-color:lightgreen">Toggle R=3pc sphere</button>
+   <br><br>
+   <b>Viewpoints: </b> &emsp;
+   <button onclick="document.getElementById('x3d').runtime.resetView();" style="background-color: LightSteelBlue"><b>Reset View</b></button> 
+   <button onclick="setView(+1);" style="background-color: LightSteelBlue"><b>Next View</b></button> 
+   <br><br>
+   <button type="button" id="btn-z" onclick="setView('-z');" style="background-color: Moccasin">-z (from Earth)</button>
+   <button type="button" id="btn+z" onclick="setView('+z');" style="background-color: LightSteelBlue">+z (towards Earth)</button>
+   <button type="button" id="btn-x" onclick="setView('-x');" style="background-color: LightSteelBlue">-x (from West)</button>
+   <button type="button" id="btn+x" onclick="setView('+x');" style="background-color: LightSteelBlue">+x (from East)</button>
+   <button type="button" id="btn-y" onclick="setView('-y');" style="background-color: LightSteelBlue">-y (from South)</button>
+   <button type="button" id="btn+y" onclick="setView('+y');" style="background-color: LightSteelBlue">+y (from North)</button>
+</p>
 
-  <div id="sideMenu">
-  <b>Clip planes:</b> &emsp; <Button type="button" onclick="addClipPlane();" style="background-color: GhostWhite">Add clip plane</Button>
-  </div>
-
-  <p>&emsp; <br><br> </p>
+<div id="sideMenu">
+<b>Clip planes:</b> &emsp; <Button type="button" onclick="addClipPlane();" style="background-color: GhostWhite">Add clip plane</Button>
+</div>
+<p>&emsp; <br><br> </p>
 
 
 
