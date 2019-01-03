@@ -11,7 +11,7 @@ encoding: utf-8
 #title: 
 email: frederic.vogt@alumni.anu.edu.au
 description: > # this means to ignore newlines until "baseurl:"
-  E0102-VR: an experimental VR application to explore the scientific potential of VR in astrophysics.
+  E0102-VR: an experimental application to explore the scientific potential of Virtual reality for observational astrophysics.
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 #twitter_username: 
