@@ -95,7 +95,7 @@ anchored to the rest frame of the SMC for depth), visible as a purple sphere.
 One sphere of 3 pc in radius is included as a scale references. The blue arrow points 
 towards the Earth (located 62 kpc away), the green arrow points North, and the red arrow 
 points West.<br>
-
+<br>
 The central gap in the model (0.4 pc thick) corresponds to the rest-frame [OIII] spectral 
 range in the SMC. This area is contaminated by background oxygen emission that fills the 
 full spatial extent of the datacube, and which was cropped off from this 3D map for clarity 
@@ -587,19 +587,9 @@ Typical loading time (dependant on connectivity speed): 5-30s.
     </script>
 <!-- ################################################################################# -->
 <!-- ################################################################################# -->
-
-<!-- Set the style of the X3DOM box. A simple box with orange border.                  -->        
-    <style>
-       x3d
-       {
-          border:2px solid darkorange;
-       }   
-    </style>
-  </head> 
-
-  <body onload="initialize();"> 
+ 
   <div>
-  <p style="width:700px;height:500px;"> 
+  <p style="width:100%"> 
   <!-- Start of the X3DOM part -->   
   <x3d id = "x3d" width='700px' height='500px', margin-left='300px'> 
     <scene id="scene" doPickPass="false"> 
@@ -651,7 +641,6 @@ Typical loading time (dependant on connectivity speed): 5-30s.
   </div>
 
   <p>&emsp; <br><br> </p>
-  </body>
 
 
 
