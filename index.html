@@ -586,7 +586,7 @@ Typical loading time (dependant on connectivity speed): 5-30s.
     </script>
 <!-- ################################################################################# -->
 <!-- ################################################################################# -->
- 
+<div onload="initialize();"> 
 <div>
 <p style="width:100%"> 
 <!-- Start of the X3DOM part -->   
@@ -613,20 +613,21 @@ Typical loading time (dependant on connectivity speed): 5-30s.
 <!-- Start of the interaction buttons part -->
 <div> 
  <p style="width:700px">
+   <br>
    <b>Screenshot:</b> &emsp; <Button type="button" onclick="takeScreenshot();" style="background-color: GhostWhite">New</Button> 
    &#8594; <a id="ssLink"></a>
-   <br><br>
+   <br>
    <b>Outer flux density level:</b> &emsp; <a id="flux">2.5</a> \( \times10^{-18} \text{ erg s}^{-1} \text{ cm}^{-2}\ \AA^{-1}\) &emsp;
    <button type="button" id="btnpClick" onClick="onpClick()" style="background-color: Tomato">+layer</button>
    <button type="button" id="btnmClick" onClick="onmClick()" style="background-color: GhostWhite">-layer</button>  
-   <br><br>
+   <br>
    <b>Reference spheres: </b> &emsp;
    <button type="button" id="btnSphere_3" onClick="Sphere3()" style="background-color:lightgreen">Toggle R=3pc sphere</button>
-   <br><br>
+   <br>
    <b>Viewpoints: </b> &emsp;
    <button onclick="document.getElementById('x3d').runtime.resetView();" style="background-color: LightSteelBlue"><b>Reset View</b></button> 
    <button onclick="setView(+1);" style="background-color: LightSteelBlue"><b>Next View</b></button> 
-   <br><br>
+   <br>
    <button type="button" id="btn-z" onclick="setView('-z');" style="background-color: Moccasin">-z (from Earth)</button>
    <button type="button" id="btn+z" onclick="setView('+z');" style="background-color: LightSteelBlue">+z (towards Earth)</button>
    <button type="button" id="btn-x" onclick="setView('-x');" style="background-color: LightSteelBlue">-x (from West)</button>
@@ -640,7 +641,7 @@ Typical loading time (dependant on connectivity speed): 5-30s.
 </div>
 <br>
 <br>
-
+</div>
 
 
 
