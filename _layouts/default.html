@@ -18,7 +18,7 @@ Combined with Jekyll by FPAVogt, December 2015.
   
    {%if page.x3d %}{% include x3d-head.html %}{% else %}{% include head.html %}{% endif %}
 
-   <body>
+   <body onload="initialize();">
       {% include header.html %}
 
        <div id="page">

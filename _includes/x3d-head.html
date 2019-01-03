@@ -5,6 +5,7 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
   <script type='text/javascript' src='./x3d/x3dom.js'> </script>
   <script type='text/javascript' src='./x3d/clipplane_FPAV.js'> </script>
   <link rel='stylesheet' type='text/css' href='./x3d/x3dom.css'></link> 
@@ -18,15 +19,15 @@
   </script>
  
  
-<style>
-x3d{
- border:2px solid darkorange;        
- background:#000
-}
-</style>
+   <style>
+   x3d{
+   border:2px solid darkorange;        
+   background:#000
+   }
+   </style>
 
 
-  <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">-->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
   <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
   <!--<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">-->
   <!--<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">-->
