@@ -1,644 +1,81 @@
 ---
-layout: page
-title: E0102-VR
-sentence: Exploring the structure of a dead star in 3D.
+layout: default
+title: Home
 fn: index.html
 x3d: True
 ---
 
+<div class="title">
+	<h2>E0102-VR</h2>
+	<span class="byline">An experimental VR application for observational astronomy</span> 
+</div>
 
 <h3><b>Welcome!</b></h3>
 <br>
-
-<p style="width:100%">
-This website (and the associated <a href="https://github.com/fpavogt/E0102-VR">Github repository</a>) is dedicated to the Virtual Reality (VR) 
-application <i>E0102-VR</i>.<br> 
-<br>
-This application was developed between June and September 2018 at the Chilean headquarters 
-of the European Southern Observatory (ESO) in Santiago. It was designed to <b>explore the 
-potential of VR for the visualization and scientific characterization of observational datasets in astrophysics.</b><br> 
+<p style="width:100%;line-height:130%;">
+This website is dedicated to the Virtual Reality (VR) 
+application "E0102-VR". This application was developed between June and September 2018 at 
+the Chilean headquarters of the European Southern Observatory (ESO) in Santiago. It is 
+designed to <b>explore the scientific potential of VR for the visualization and 
+characterization of observational datasets in astrophysics.</b><br>
+<br> 
 <br>
 The specific scientific goal of E0102-VR is to help characterize the complex 3D structure of
 the oxygen-bright ejecta in the supernova remnant 1E 0102.2-7219, located in the Small 
 Magellanic Cloud. These ejecta correspond to the outer-layers of a massive star that exploded 
 in a core-collapse supernova ~2050 years ago. During this event, the outer-layers of the 
 progenitor star were expelled into space at a few 1000 km/s, giving rise to the complex 
-filamentary structure we see today in this system.<br>
+filamentary structure we see today in this system (see Fig. 1).<br>
 <br>
+</p>
 
-<img src="./images/eso1810b.jpg" style="vertical-align:middle"/><br>
+<p style="width:100%;line-height:130%;text-align: center"> 
+<img src="./images/eso1810b.jpg" style="align:middle;margin-left:auto;margin-right:auto"/><br>
 <br>
-<i> Fig.1: The oxygen-bright filaments of the supernova remnant 1E 0102.2-7219, seen by the 
-Hubble Space Telescope. Credit: NASA, ESA and the Hubble Heritage Team (STScI/AURA).</i><br>
+<i> Fig.1: The oxygen-bright filaments (in blue) of the supernova remnant 1E 0102.2-7219 in the Small Magellanic Cloud, seen by the 
+Hubble Space Telescope. Credit: <a href="https://www.eso.org/public/images/eso1810b/">NASA, ESA and the Hubble Heritage Team (STScI/AURA).</a></i><br>
 <br>
 </p>
 
 <div style="width:55%;float:left">
-<p style="width:90%">
+<p style="width:90%;line-height:130%;">
 One key aspect of these ejecta is that they have been roughly moving ballistically (that is, 
 with a constant speed) since the supernova explosion. Hence, the radial velocity of each 
 ejecta knot can be translated into a physical depth. By measuring the radial
 velocity of all the knots in the system with the 
 <a href="https://www.eso.org/sci/facilities/develop/instruments/muse.html">MUSE integral 
-field spectrograph</a> at the Very Large Telescope, we could then assemble the 3D map of the 
-ejecta: that is, the <b>real</b> 3D map of the star chunks as we see them today.<br>
+field spectrograph</a> at the Very Large Telescope (see Fig. 2), we assembled the 3D map of the 
+ejecta: the <b>real</b> 3D distribution of the star chunks that we see today!<br>
 <br>
-Our E0102-VR application allows a complete immersion of the user inside the 3D structure. 
-The interactive plot below also allows to interact with the 3D structure.
+The E0102-VR application offers the user a complete immersion inside the 3D structure. 
+Besides generic interaction tools that include translation, rotation, scaling and 
+transparency adjustments, E0102-VR includes:<br>
+<b>a) 2 clip plane modes to slice the model along different directions, and,<br>
+b) a measurement mode, to extract actual angles and distances from the structure.<br></b>
 <br>
+E0102-VR requires the use of an HTC Vive. The 3D structure of the ejecta, however, can also
+be explored using the interactive plot below.<br>
 </p>
 </div>
 
 <div style="width:45%;float:left">
 <img src="./images/E0102_muse.png" width="90%"/>
 <br>
-<p style="width:100%">
+<p style="width:100%;line-height:130%;">
 <i> Fig.2: The oxygen-bright filaments of the supernova remnant 1E 0102.2-7219, seen by 
 MUSE. The radial velocity of the oxygen-emitting knots can be measured for each pixel in 
 this image.</i><br></p>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-<div style="width:100%">
-<br>
-<h4>To learn more about the application E0102-VR:</h4>
+<p>
+<h4>Further reading:</h4>
 Baracaglia & Vogt, <a href=""><i>Exploring the scientific potential of Virtual Reality for 
-astrophysics with SNR 1E 0102.2-7219</i></a>, in prep. (2019).
-
-<h4>To learn more about the supernova remnant 1E 0102.2-7219:</h4>
+astrophysics with SNR 1E 0102.2-7219</i></a>, in prep. (2019).<br>
+<br>
 Vogt, Bartlett, Seitenzahl, Dopita, Ghavamian, Ruiter & Terry, <a href="https://arxiv.org/abs/1803.01006">
 <i>Identification of the Central Compact Object in the young supernova remnant 1E0102.2-7219</i></a>,
 Nature Astronomy 2, 465 (2018).<br>
-<br>
-</div>
-
-
-<!--             ###           -->
-
-<h4>The interactive 3D map of the ejecta:</h4>
-<div>
-<p style="width:100%">
-
-This interactive version of the 3D map relies on the X3DOM (pronounced "X-Freedom") 
-framework for its integration within HTML documents. Dedicated interaction buttons allow 
-to select pre-set views of the model, add clip planes, take screenshots, toggle the 
-reference sphere on or off, and "peel" the intensity layers of the oxygen-bright ejecta. 
-
-For each clip plane, the value \(\Delta d\) indicates in pc the distance between the 
-given clip plane and the model center (set as the location of the Central Compact Object, 
-anchored to the rest frame of the SMC for depth), visible as a purple sphere. 
-One sphere of 3 pc in radius is included as a scale references. The blue arrow points 
-towards the Earth (located 62 kpc away), the green arrow points North, and the red arrow 
-points West.<br>
-<br>
-The central gap in the model (0.4 pc thick) corresponds to the rest-frame [OIII] spectral 
-range in the SMC. This area is contaminated by background oxygen emission that fills the 
-full spatial extent of the datacube, and which was cropped off from this 3D map for clarity 
-purposes.<br>
-<br>
-Typical loading time (dependant on connectivity speed): 5-30s.
 </p>
-</div>
-
-<!-- ############### Some scripts to change the transparency of elements ############# --> 
-<!--                                                                                   -->
-<!-- These functions also take care of changing the color of the corresponding buttons -->
-<!-- accordingly, for maximum clarity on the user side.                                -->
-<!--                                                                                   -->
-    <script>
-        function Sphere3()
-        {
-          if(document.getElementById('model__sphere3').getAttribute('transparency')!= '1')
-          {
-            document.getElementById('model__sphere3').setAttribute('transparency', '1');
-            document.getElementById("btnSphere_3").setAttribute("style", "background-color: Tomato"); 
-          }
-          else
-          { 
-            document.getElementById('model__sphere3').setAttribute('transparency', '0'); 
-            document.getElementById("btnSphere_3").setAttribute("style", "background-color: lightgreen");
-          }
-        }
-        
-        function Layer1()
-        {
-          if(document.getElementById('model__oiii25').getAttribute('transparency')!= '1')
-            document.getElementById('model__oiii25').setAttribute('transparency', '1');
-          else 
-            document.getElementById('model__oiii25').setAttribute('transparency', '0'); 
-        }
-        
-        function Layer2()
-        {
-          if(document.getElementById('model__oiii12').getAttribute('transparency')!= '1')
-            document.getElementById('model__oiii12').setAttribute('transparency', '1');
-          else 
-            document.getElementById('model__oiii12').setAttribute('transparency', '0'); 
-        }
-        
-        function Layer3()
-        {
-          if(document.getElementById('model__oiii6').getAttribute('transparency')!= '1')
-            document.getElementById('model__oiii6').setAttribute('transparency', '1');
-          else 
-            document.getElementById('model__oiii6').setAttribute('transparency', '0'); 
-        }
-        
-        function Layer4()
-        {
-          if(document.getElementById('model__oiii2.5').getAttribute('transparency')!= '1')
-            document.getElementById('model__oiii2.5').setAttribute('transparency', '1');
-          else 
-            document.getElementById('model__oiii2.5').setAttribute('transparency', '0'); 
-        }
-        
-    </script>
-<!-- ############# Some functions to peal the models back and forth ################## -->
-<!--                                                                                   -->
-<!-- These functions also take care of changing the color of the corresponding buttons -->
-<!-- accordingly, for maximum clarity on the user side.                                -->
-<!--                                                                                   -->
-    <script type="text/javascript">
-        var clicks = 3; // Keep track of the current level
-        var layers = 4; // Total number of layers
-        var levels = ['25.0','12.0','6.0','2.5'] // Layer levels
-        // And the corresponding functions to toggle the transparency
-        var toggle_functions = [Layer1, Layer2, Layer3, Layer4]
-    
-        // A function to add a layer
-        function onpClick() 
-        {
-          if (clicks <layers-1) // Check if I have another layer to add
-          {
-            clicks += 1;
-            toggle_functions[clicks]();
-          }
-          
-          // Deal with the button colors
-          if (clicks+1 == layers)
-          {
-            document.getElementById("btnpClick").setAttribute("style", "background-color: Tomato"); 
-            document.getElementById("btnmClick").setAttribute("style", "background-color: GhostWhite");
-          }
-          else if (clicks == 0)
-          {
-            document.getElementById("btnpClick").setAttribute("style", "background-color: GhostWhite"); 
-            document.getElementById("btnmClick").setAttribute("style", "background-color: Tomato");
-          }
-          else
-          {
-            document.getElementById("btnmClick").setAttribute("style", "background-color: GhostWhite");
-            document.getElementById("btnpClick").setAttribute("style", "background-color: GhostWhite");
-          }
-          
-          // Update the flux density level value on the display
-          document.getElementById("flux").innerHTML = levels[clicks];
-        };
-    
-        // A function to remove a layer
-        function onmClick() 
-        {
-          if (clicks>0) // Check if I have another layer to remove
-          {
-            toggle_functions[clicks]();
-            clicks -= 1;
-          }
-          
-          // Deal with the button colors
-          if (clicks+1 == layers)
-          {
-            document.getElementById("btnpClick").setAttribute("style", "background-color: Tomato"); 
-            document.getElementById("btnmClick").setAttribute("style", "background-color: GhostWhite");
-          }
-          else if (clicks == 0)
-          {
-            document.getElementById("btnpClick").setAttribute("style", "background-color: GhostWhite"); 
-            document.getElementById("btnmClick").setAttribute("style", "background-color: Tomato");
-          }
-          else
-          {
-            document.getElementById("btnmClick").setAttribute("style", "background-color: GhostWhite");
-            document.getElementById("btnpClick").setAttribute("style", "background-color: GhostWhite");
-          }
-          
-          // Update the flux density level value on the display
-          document.getElementById("flux").innerHTML = levels[clicks];
-        };
-    </script>
-<!-- ############### Some scripts to deal with clip planes ########################### -->
-<!--                                                                                   -->
-<!-- The code below has been adapted from this example:                                -->
-<!-- http://examples.x3dom.org/clipPlane/clipplane.html                                -->
-<!-- Modifications include new interaction buttons (on/off, +/-), and the display of   -->
-<!-- of the clip plane parameters (distance from center and angle)                     -->
-<!-- These functions complement those in clipplanes_FPAV.js                            -->
-<!--                                                                                   -->
-    <script>
-     
-        var runtime = null, clipScope = null, scene = null, clipPlanes = [];
-        initialize = function() {
-            runtime = document.getElementById("x3d").runtime;
-            scene = document.getElementById( "scene" );
-            clipScope = document.getElementById( "clipScope" );
-        };
-
-        // FPAV: a function to change visibility of clip planes
-        function changeState (elm, id) 
-        {
-          clipPlanes[ id ].State();
-            
-          document.getElementById( "btnToggle_" + id ).className = "";
-
-          elm.className = "active";
-        }
- 
-        // A function to deal with axis swaps
-        function changeAxis ( elm, id, axis )
-        {
-          clipPlanes[ id ].Axis( axis );
-          document.getElementById( "slider_" + id ).value = "0.5";
-          document.getElementById( "btnX_" + id ).className = "";
-          document.getElementById( "btnY_" + id ).className = "";
-          document.getElementById( "btnZ_" + id ).className = "";
-
-          elm.className = "active";
-        }
-
-        // A function to deal with clipping side swaps
-        function changeClipping ( elm, id, clipping )
-        {
-          clipPlanes[ id ].Clipping( clipping );
-
-          document.getElementById( "btnNear_" + id ).className = "";
-          document.getElementById( "btnFar_" + id ).className = "";
-
-          elm.className = "active";
-        }
-
-        // A function to deal with clip plane translations
-        function moveClipPlane(id, value)
-        {
-          clipPlanes[ id ].Move( value );
-        }
-        
-        // A function to deal with clip plane rotations
-        function rotateClipPlane(id, value)
-        {
-          clipPlanes[ id ].Rotate( value );
-        }
-
-        // A function to add a clip plane
-        function addClipPlane()
-        {
-          addMenu();
-          clipPlanes.push( new ClipPlane(clipScope, scene, runtime) );
-        }
- 
-        // A function to add the button menu for a new clip plane
-        function addMenu()
-        {
-          var div = document.createElement("div");
-          div.setAttribute("class", "clipPlaneMenu");
-
-          // FPAV: add an ON/OFF button to hide a clip plane after it is created.
-          var btnToggle = document.createElement("button");
-          btnToggle.setAttribute("id", "btnToggle_" +clipPlanes.length.toString());
-          btnToggle.setAttribute("data-id", clipPlanes.length.toString());
-          btnToggle.setAttribute("type", "button");
-          btnToggle.setAttribute("class", "active");
-          btnToggle.innerHTML = "ON/OFF";
-          btnToggle.setAttribute("style","background-color: lightgreen");
-          btnToggle.onclick = function() 
-          {
-            changeState(this, this.dataset.id);
-            // Deal with the color
-            if (btnToggle.getAttribute("style") == "background-color: lightgreen")
-            {
-              btnToggle.setAttribute("style","background-color: Tomato");
-            }
-            else if (btnToggle.getAttribute("style") == "background-color: Tomato")
-            {
-              btnToggle.setAttribute("style","background-color: lightgreen");
-            }
-          };
-            
-          // A slider to move the plane  
-          var slider = document.createElement("input");
-          slider.setAttribute("id", "slider_" +clipPlanes.length.toString());
-          slider.setAttribute("data-id", clipPlanes.length.toString());
-          slider.setAttribute("type", "range");
-          slider.setAttribute("min", "0");
-          slider.setAttribute("max", "1");
-          slider.setAttribute("step", "0.01");
-          slider.onchange = function() 
-          {
-            moveClipPlane(this.dataset.id, this.value);
-            // FPAV: update the value of distance displayed
-            document.getElementById("sliderPosTxt_"+this.dataset.id).innerHTML = " &#916;d: "+clipPlanes[this.dataset.id].Distance().toFixed(1)+" pc";
-          };
-          slider.setAttribute("value", "0.5");
-          
-            
-          // FPAV: for more accuracy, add a button to step down cleanly
-          var btnSliderM = document.createElement("button");
-          btnSliderM.setAttribute("id", "btnSliderM_" +clipPlanes.length.toString());
-          btnSliderM.setAttribute("data-id", clipPlanes.length.toString());
-          btnSliderM.setAttribute("type", "button");
-          btnSliderM.setAttribute("class", "active");
-          btnSliderM.setAttribute("style","background-color: GhostWhite");
-          btnSliderM.innerHTML = "-";
-          btnSliderM.onclick = function() 
-          {
-            document.getElementById("slider_"+this.dataset.id).stepDown();
-            document.getElementById("slider_"+this.dataset.id).onchange();
-          };
-        
-          // FPAV: again, this time to step up
-          var btnSliderP = document.createElement("button");
-          btnSliderP.setAttribute("id", "btnSliderP_" +clipPlanes.length.toString());
-          btnSliderP.setAttribute("data-id", clipPlanes.length.toString());
-          btnSliderP.setAttribute("type", "button");
-          btnSliderP.setAttribute("class", "active");
-          btnSliderP.setAttribute("style","background-color: GhostWhite");
-          btnSliderP.innerHTML = "+";
-          btnSliderP.onclick = function() 
-          {
-            document.getElementById("slider_"+this.dataset.id).stepUp();
-            document.getElementById("slider_"+this.dataset.id).onchange();
-          };
-
-          //Set the clip plane around the X axis
-          var btnX = document.createElement("button");
-          btnX.setAttribute("id", "btnX_" +clipPlanes.length.toString());
-          btnX.setAttribute("data-id", clipPlanes.length.toString());
-          btnX.setAttribute("type", "button");
-          btnX.setAttribute("class", "active");
-          btnX.setAttribute("style","background-color: Moccasin");
-          btnX.innerHTML = "x";
-          btnX.onclick = function() 
-          {
-            changeAxis(this, this.dataset.id, 'X');
-            // FPAV: update the angle and distance, deal with button colors ...
-            document.getElementById("sliderPosTxt_"+this.dataset.id).innerHTML = " &#916;d: "+clipPlanes[this.dataset.id].Distance().toFixed(1)+" pc";
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";                
-            this.setAttribute("style","background-color: Moccasin");
-            document.getElementById("btnY_"+this.dataset.id).setAttribute("style","background-color: GhostWhite"); 
-            document.getElementById("btnZ_"+this.dataset.id).setAttribute("style","background-color: GhostWhite");
-          };
-
-          //Set the clip plane around the Y axis
-          var btnY = document.createElement("button");
-          btnY.setAttribute("id", "btnY_" +clipPlanes.length.toString());
-          btnY.setAttribute("data-id", clipPlanes.length.toString());
-          btnY.setAttribute("type", "button");
-          btnY.setAttribute("style","background-color: GhostWhite");
-          btnY.innerHTML = "y";
-          btnY.onclick = function() 
-          {
-            changeAxis(this, this.dataset.id, 'Y');
-            // FPAV: update the angle and distance, deal with button colors ...            
-            document.getElementById("sliderPosTxt_"+this.dataset.id).innerHTML = " &#916;d: "+clipPlanes[this.dataset.id].Distance().toFixed(1)+" pc";
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";                
-            this.setAttribute("style","background-color: Moccasin");
-            document.getElementById("btnX_"+this.dataset.id).setAttribute("style","background-color: GhostWhite"); 
-            document.getElementById("btnZ_"+this.dataset.id).setAttribute("style","background-color: GhostWhite");
-          };
-          
-          //Set the clip plane around the Y axis
-          var btnZ = document.createElement("button");
-          btnZ.setAttribute("id", "btnZ_" +clipPlanes.length.toString());
-          btnZ.setAttribute("data-id", clipPlanes.length.toString());
-          btnZ.setAttribute("type", "button");
-          btnZ.setAttribute("style","background-color: GhostWhite");
-          btnZ.innerHTML = "z";
-          btnZ.onclick = function() 
-          {
-            changeAxis(this, this.dataset.id, 'Z');
-            // FPAV: update the angle and distance, deal with button colors ... 
-            document.getElementById("sliderPosTxt_"+this.dataset.id).innerHTML = " &#916;d: "+clipPlanes[this.dataset.id].Distance().toFixed(1)+" pc";                
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";
-            this.setAttribute("style","background-color: Moccasin");
-            document.getElementById("btnX_"+this.dataset.id).setAttribute("style","background-color: GhostWhite"); 
-            document.getElementById("btnY_"+this.dataset.id).setAttribute("style","background-color: GhostWhite");
-          };
-          
-          // Two buttons to switch which side of the clip plane is being clipped
-          var btnNear = document.createElement("button");
-          btnNear.setAttribute("id", "btnNear_" +clipPlanes.length.toString());
-          btnNear.setAttribute("data-id", clipPlanes.length.toString());
-          btnNear.setAttribute("type", "button");
-          btnNear.setAttribute("class", "active");
-          btnNear.setAttribute("style","background-color: Moccasin");
-          btnNear.innerHTML = "Near";
-          btnNear.onclick = function() 
-          {
-            changeClipping(this, this.dataset.id, -1);
-            // FPAV: update the angle and distance, deal with button colors ... 
-            document.getElementById("sliderPosTxt_"+this.dataset.id).innerHTML = " &#916;d: "+clipPlanes[this.dataset.id].Distance().toFixed(1)+" pc";
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";
-            document.getElementById("btnFar_"+this.dataset.id).setAttribute("style","background-color: GhostWhite"); 
-            this.setAttribute("style","background-color: Moccasin");
-          };
-
-          var btnFar = document.createElement("button");
-          btnFar.setAttribute("id", "btnFar_" +clipPlanes.length.toString());
-          btnFar.setAttribute("data-id", clipPlanes.length.toString());
-          btnFar.setAttribute("type", "button");
-          btnFar.setAttribute("style","background-color: GhostWhite");
-          btnFar.innerHTML = "Far";
-          btnFar.onclick = function() 
-          {
-            changeClipping(this, this.dataset.id, 1);
-            // FPAV: update the angle and distance, deal with button colors ...             
-            document.getElementById("sliderPosTxt_"+this.dataset.id).innerHTML = " &#916;d: "+clipPlanes[this.dataset.id].Distance().toFixed(1)+" pc";                
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";
-            document.getElementById("btnNear_"+this.dataset.id).setAttribute("style","background-color: GhostWhite"); 
-            this.setAttribute("style","background-color: Moccasin");
-           
-          };
-          
-          // Add buttons to rotate the clip plane (set the step to 6 degrees)
-          var btnRotAdd = document.createElement("button");
-          btnRotAdd.setAttribute("id", "btnRotAdd_" +clipPlanes.length.toString());
-          btnRotAdd.setAttribute("data-id", clipPlanes.length.toString());
-          btnRotAdd.setAttribute("type", "button");
-          btnRotAdd.setAttribute("style","background-color: GhostWhite");
-          btnRotAdd.innerHTML = "&#916;&#952;: +6&#176;";
-          btnRotAdd.onclick = function() 
-          {
-            rotateClipPlane(this.dataset.id, 0.10472);
-            // FPAV: update the angle  ...
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";                  
-          };
-          
-          var btnRotSub = document.createElement("button");
-          btnRotSub.setAttribute("id", "btnRotSub_" +clipPlanes.length.toString());
-          btnRotSub.setAttribute("data-id", clipPlanes.length.toString());
-          btnRotSub.setAttribute("type", "button");
-          btnRotSub.setAttribute("style","background-color: GhostWhite");
-          btnRotSub.innerHTML = "&#916;&#952;: -6&#176;";
-          btnRotSub.onclick = function() 
-          {
-            rotateClipPlane(this.dataset.id, -0.10472);
-            // FPAV: update the angle  ...
-            document.getElementById("anglePosTxt_"+this.dataset.id).innerHTML = " &#952;: "+clipPlanes[this.dataset.id].Angle()+"&#176;";
-          };
-
-          // FPAV: create some text node for a more elegant/useful button menu
-          var misc1 = document.createTextNode(" | ");
-          var misc2 = document.createTextNode(" | ");
-          var misc3 = document.createTextNode(" | ");
-          var misc4 = document.createTextNode(" | ");
-          var sliderPosTxt = document.createElement("a");
-          sliderPosTxt.setAttribute('id',"sliderPosTxt_"+clipPlanes.length.toString());
-          sliderPosTxt.innerHTML = " &#916;d: 0.0 pc";
-            
-          var anglePosTxt = document.createElement("a");
-          anglePosTxt.setAttribute('id',"anglePosTxt_"+clipPlanes.length.toString());
-          anglePosTxt.innerHTML = " &#952;: 0&#176;"
-            
-          // Actually add the different elements to the menu
-          div.appendChild(btnToggle);
-          div.appendChild(misc1);
-          div.appendChild(btnSliderM);
-          div.appendChild(slider);
-          div.appendChild(btnSliderP);
-          div.appendChild(sliderPosTxt);
-          div.appendChild(misc2);
-          div.appendChild(btnX);
-          div.appendChild(btnY);
-          div.appendChild(btnZ);
-          div.appendChild(misc3);
-          div.appendChild(btnNear);
-          div.appendChild(btnFar);
-          div.appendChild(misc4);
-          div.appendChild(btnRotAdd);
-          div.appendChild(btnRotSub);
-          div.appendChild(anglePosTxt);
-          
-          // Add the menu to the page  
-          document.getElementById("sideMenu").appendChild(div);
-            
-        }
-    </script>
-<!-- ############### Some scripts to deal with the view change ####################### -->
-<!--                                                                                   -->
-<!-- There are easier ways to do this, but I really really wanted to have the buttons  -->
-<!-- change color to indicate the current view selected                                -->
-<!--                                                                                   -->
-    <script type="text/javascript"> 
-
-    var currentView = 0; // Keep track of the current view
-    var views = 6; // How many views in total ?
-    var viewIds = ['-z','+z','-x','+x','-y','+y'] // View ids
-    
-    // FPAV: this function goes to the next view in the list, or to a specific view
-    function setView(value) 
-    {
-      document.getElementById("btn"+viewIds[currentView].toString()).setAttribute('style', "background-color: LightSteelBlue");
-        
-      if (value==1)
-      {
-        if (currentView <views-1)
-        {
-          currentView += 1;
-        }
-        else
-        {
-          currentView = 0;
-        }
-      }
-      else
-      {
-        currentView = viewIds.indexOf(value)
-      }
-      document.getElementById(viewIds[currentView]).setAttribute('set_bind','true');
-      document.getElementById("btn"+viewIds[currentView].toString()).setAttribute('style', "background-color: Moccasin");
-        
-    };
-    </script>    
-<!-- ################### Some scripts to take screenshots ############################ -->
-<!--                                                                                   -->
-<!-- Adapted from an original here:                                                    -->
-<!-- http://doc.x3dom.org/tutorials/applicationTutorials/screenshot/                   -->
-<!--                                                                                   -->
-    <script type="text/javascript">
-
-    var screenshotCount = 1; // Keep track of how many screen shots are taken
-    
-    //Every time the user clicks on the 'take screenhot' button
-    function takeScreenshot() 
-    {    
-      //Get data url from the runtime
-      var imgUrl = document.getElementById("x3d").runtime.getScreenshot();
-
-      document.getElementById("ssLink").innerHTML = "Download screenshot "+ screenshotCount;
-      document.getElementById("ssLink").href = imgUrl;
-      document.getElementById("ssLink").download = "screenshot_1E0102_" + screenshotCount + ".png";
-        
-      screenshotCount++;
-    };
-    </script>
-<!-- ################################################################################# -->
-<!-- ################################################################################# --> 
-<div>
-<p style="width:100%"> 
-<!-- Start of the X3DOM part -->   
-<x3d id = "x3d" width='700px' height='500px' margin-left='300px'> 
-   <scene id="scene" doPickPass="false"> 
-   <!--<background backUrl="./background.png"></background>-->
-   <!-- Define the view points of interest -->
-   <OrthoViewpoint id="-z" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,1,0,3.14' position='0,0,-10' zFar='100' zNear='-10' ></OrthoViewpoint> 
-   <OrthoViewpoint id="+z" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,0,1,0' position='0,0,10' zFar='100' zNear='-10' ></OrthoViewpoint> 
-   <OrthoViewpoint id="-x" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,-1,0,1.57' position='-10,0,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
-   <OrthoViewpoint id="+x" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='0,1,0,1.57' position='10,0,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
-   <OrthoViewpoint id="-y" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='1,1,-1,2.0944' position='0,-10,0' zFar='100' zNear='-10' ></OrthoViewpoint>          
-   <OrthoViewpoint id="+y" bind='false' centerOfRotation='0,0,0' description='front view' fieldOfView='[-8,-8,8,8]' isActive='true' metadata='X3DMetadataObject' orientation='1,1,1,4.1888' position='0,10,0' zFar='100' zNear='-10' ></OrthoViewpoint> 
-       
-   <Transform id="clipScope">
-   <inline url="./x3d/1E0102_muse_mod.x3d" nameSpaceName="model" mapDEFToID="true" onclick=''/>
-   </Transform>
-   </scene> 
-</x3d> 
-<!-- End of the X3DOM part -->
-</p>
-</div>
-
-<!-- Start of the interaction buttons part -->
-<div> 
- <p style="width:700px">
-   <br>
-   <b>Screenshot:</b> &emsp; <Button type="button" onclick="takeScreenshot();" style="background-color: GhostWhite">New</Button> 
-   &#8594; <a id="ssLink"></a>
-   <br>
-   <b>Outer flux density level:</b> &emsp; <a id="flux">2.5</a> \( \times10^{-18} \text{ erg s}^{-1} \text{ cm}^{-2}\ \AA^{-1}\) &emsp;
-   <button type="button" id="btnpClick" onClick="onpClick()" style="background-color: Tomato">+layer</button>
-   <button type="button" id="btnmClick" onClick="onmClick()" style="background-color: GhostWhite">-layer</button>  
-   <br>
-   <b>Reference spheres: </b> &emsp;
-   <button type="button" id="btnSphere_3" onClick="Sphere3()" style="background-color:lightgreen">Toggle R=3pc sphere</button>
-   <br>
-   <b>Viewpoints: </b> &emsp;
-   <button onclick="document.getElementById('x3d').runtime.resetView();" style="background-color: LightSteelBlue"><b>Reset View</b></button> 
-   <button onclick="setView(+1);" style="background-color: LightSteelBlue"><b>Next View</b></button> 
-   <br>
-   <button type="button" id="btn-z" onclick="setView('-z');" style="background-color: Moccasin">-z (from Earth)</button>
-   <button type="button" id="btn+z" onclick="setView('+z');" style="background-color: LightSteelBlue">+z (towards Earth)</button>
-   <button type="button" id="btn-x" onclick="setView('-x');" style="background-color: LightSteelBlue">-x (from West)</button>
-   <button type="button" id="btn+x" onclick="setView('+x');" style="background-color: LightSteelBlue">+x (from East)</button>
-   <button type="button" id="btn-y" onclick="setView('-y');" style="background-color: LightSteelBlue">-y (from South)</button>
-   <button type="button" id="btn+y" onclick="setView('+y');" style="background-color: LightSteelBlue">+y (from North)</button>
-</p>
-
-<div id="sideMenu">
-<b>Clip planes:</b> &emsp; <Button type="button" onclick="addClipPlane();" style="background-color: GhostWhite">Add clip plane</Button>
-</div>
-</div>
-<br>
-<br>
 
 
 
