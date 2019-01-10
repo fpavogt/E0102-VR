@@ -316,7 +316,7 @@
 	#header
 	{
 		position: relative;
-		padding: 2em 0em;
+		padding: 3em 0em;
 	}
 
 /*********************************************************************************/
@@ -326,7 +326,7 @@
 	#logo
 	{
 		position: absolute;
-		top: 2em;
+		top: 1em;
 		left: 0;
 	}
 	
