@@ -5,7 +5,8 @@
 		</div>
 		<div id="menu" style="vertical-align:middle">
 			<ul>
-				<li><a href="index.html" accesskey="1" title="">Home</a></li>
+			
+				<li  {%if page.fn=="index.html" %}{class="current_page_item"}{% endif %}><a href="index.html" accesskey="1" title="">Home</a></li>
 				<li><a href="download.html" accesskey="2" title="">Download</a></li>
 				<li><a href="manual.html" accesskey="3" title="">User manual</a></li>
 				<li><a href="code.html" accesskey="4" title="">The code</a></li>
@@ -15,3 +16,6 @@
 		</div>
 	</div>
 </div>
+
+
+
