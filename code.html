@@ -23,7 +23,7 @@ all their relative scripts, and it is the system that handles all the user input
 then either sent to the ‘ContainerOfAllObj’ or to the UI elements of the scene. Each controller has 
 its own scripts to perform specific actions on the model, plus three ‘Shared scripts’ common to both 
 the controllers and used to mainly track their position in space and receive user’s inputs.
-<br>
+<br><br>
 As soon as the app starts and the user loads the model, the first script that will start will be the 
 #VR_add_components, which will create all the UI elements relative to the imported 3D model. The idea 
 of creating this function, instead of having ready-to-use UI elements, is to potentially make the app 
@@ -31,7 +31,7 @@ flexible enough to allow external users to import their models and automatically
 elements, without having to worry too much about them. With this approach, once all the needed UI 
 elements are generated, the app will be fully functional and the user will have complete freedom of 
 exploring all the interactive capabilities within the scene. 
-<br> 
+<br><br>
 At the very beginning, all the scripts on the controllers (except the #VR_laser_pointer and the 
 ‘Shared Scripts’)  are deactivated, meaning that they won’t run, unless they get activated by the 
 user. The interaction with the UI elements of the scene allows activating and deactivating specific 
@@ -48,8 +48,8 @@ scaling functionalities will be deactivated and he/she will only be able to chan
 of the different layers of the model.   
 </p>
 
-<h4 style="text-align: center"> organization of the E0102-VR source code</h4>
-<img src="./images/source-code.png" style="width:50%;align:middle;margin-left:auto;margin-right:auto"/>
+<h4 style="text-align: center"> General organization of the E0102-VR source code</h4>
+<img src="./images/source_code.png" style="width:75%;align:middle;margin-left:auto;margin-right:auto"/>
 
 
 <p style="width:100%;line-height:130%;">
@@ -96,11 +96,11 @@ the model. In particular, it enables and disables the correct C# scripts attache
 In this way, we can control the specific interactions that we want to use. In particular, the script 
 has been written to avoid using at the same time:
 <ul>
-<li> the Full Freedom Clip Plane functionality together with the 3 Clip Planes functionality</li>
-<li> Scaling and Transparency functionality at the same time. </li>
+<li> - the Full Freedom Clip Plane functionality together with the 3 Clip Planes functionality</li>
+<li> - Scaling and Transparency functionality at the same time. </li>
 </ul>
 
-<br><br>
+<br>
 Next, we review the scripts attached to the controllers.
 <br><br>
 
@@ -117,6 +117,7 @@ C# scripts to start the interaction with the model in the Scene.
 <br><br>
 
 <b>Controller Grab Objects:</b>
+<br>
 This script is attached to both the controllers and it allows grabbing objects in the scene. In 
 particular, in the code there are two variables called ‘onlyGrabObjWith_TAG1’ and 
 ‘onlyGrabObjWith_TAG2’. These variables are used to choose and set what the left and right 
@@ -143,6 +144,7 @@ the reference system and the model.
 <br><br>
 
 <b>VR_model_motion_rotation (right=B controller):</b>
+<br>
 The script handles the inputs on the touchpad and it rotates the ‘ContainerOfAllObj’, which contains 
 the reference system and the model. 
 <br><br>
@@ -182,16 +184,16 @@ This script handles the creation of the measurement points inside the scene, the
 line between those points, and the calculation of the distance between each of them and their position 
 in space w.r.t. the reference system. One should note that:
 <ul>
-<li> Once the points are created, they become ‘children’ of the reference system. Moreover, we have 
+<li> 1) Once the points are created, they become ‘children’ of the reference system. Moreover, we have 
 made the design choice of having the scaling of the points strictly linked to the scaling of the 
 reference system. </li>
-<li> The distance between the points is given in the chosen measurement unit (pc as default) and it 
+<li> 2) The distance between the points is given in the chosen measurement unit (pc as default) and it 
 is affected by a constant called scaling factor, which is 1 (as default) and that can be changed 
 if needed.</li>
-<li> The position of every measurement point in space is given in two coordinate frames: 
+<li> 3) The position of every measurement point in space is given in two coordinate frames: 
 Cartesian coordinate frame (X, Y, Z), and Spherical coordinate system. By default, the reference 
 system has the Z axis pointing upwards.</li>
-<li>The text attached to each point will automatically rotate towards the user when the 
+<li> 4) The text attached to each point will automatically rotate towards the user when the 
 ‘VR_Measurement_Tool’ script is enabled.</li>
 </ul>
 
