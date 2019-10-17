@@ -1,2 +1,9 @@
 .vs/
-Temp/
+obj/
+Assets/AsImpL/
+Assets/Cross Section Shader/
+Assets/SteamVR/
+Library/
+WebGL/
+Windows/
+tmp/
